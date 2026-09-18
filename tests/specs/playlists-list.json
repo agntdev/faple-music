@@ -1,0 +1,20 @@
+[
+  {
+    "name": "My Playlists",
+    "steps": [
+      {
+        "expect": [
+          {
+            "method": "sendMessage",
+            "payload": {
+              "text": "Open user's playlist manager (create/rename/delete/view/reorder/play)"
+            }
+          }
+        ],
+        "send": {
+          "callback": "playlists:list"
+        }
+      }
+    ]
+  }
+]
