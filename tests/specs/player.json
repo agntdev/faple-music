@@ -1,0 +1,16 @@
+[
+  {
+    "name": "expired player links are friendly",
+    "steps": [
+      {
+        "send": { "callback": "play:missing-track" },
+        "expect": [
+          {
+            "method": "sendMessage",
+            "payload": { "text": "That track has expired. Search for it again and I’ll find a fresh link." }
+          }
+        ]
+      }
+    ]
+  }
+]

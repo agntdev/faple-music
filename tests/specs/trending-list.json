@@ -7,7 +7,7 @@
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Show currently trending or recommended tracks (owner-configurable source)"
+              "text": "Trending is taking a little encore break. Try Search to find a song you love."
             }
           }
         ],

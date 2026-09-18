@@ -7,13 +7,30 @@
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Open user's playlist manager (create/rename/delete/view/reorder/play)"
+              "text": "No playlists yet — tap ➕ Create playlist to make one."
             }
           }
         ],
         "send": {
           "callback": "playlists:list"
         }
+      }
+    ]
+  },
+  {
+    "name": "Create a private playlist",
+    "steps": [
+      {
+        "send": { "callback": "playlist:create" },
+        "expect": [
+          { "method": "sendMessage", "payload": { "text": "What should we call this playlist?" } }
+        ]
+      },
+      {
+        "send": { "text": "Late Night" },
+        "expect": [
+          { "method": "sendMessage", "payload": { "text": "“Late Night” is ready for your next favorite." } }
+        ]
       }
     ]
   }
