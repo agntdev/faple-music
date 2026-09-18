@@ -1,6 +1,7 @@
 import { Composer } from "grammy";
 import type { Ctx } from "../bot.js";
 import { mainMenuKeyboard } from "../toolkit/index.js";
+import { notifyOwner } from "../domain.js";
 
 // The /start handler renders the bot's MAIN MENU — the primary way users operate
 // a button-first bot. A feature adds its own button by calling
@@ -12,6 +13,7 @@ const composer = new Composer<Ctx>();
 const WELCOME = "👋 Welcome! Tap a button below to get started.";
 
 composer.command("start", async (ctx) => {
+  await notifyOwner(ctx, "A new listener just opened faple music.");
   await ctx.reply(WELCOME, { reply_markup: mainMenuKeyboard() });
 });
 

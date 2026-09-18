@@ -7,7 +7,7 @@
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Prompt user to enter a search query using ForceReply"
+              "text": "What song are you looking for?"
             }
           }
         ],
